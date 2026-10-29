@@ -69,6 +69,11 @@ h1,h2,h3{font-family:var(--display); letter-spacing:-.02em; text-wrap:balance; m
 .fa-tag{font-size:8.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--accent); background:var(--accent-soft); padding:2px 6px; border-radius:5px; margin:0 6px; vertical-align:middle; white-space:nowrap}
 .paper-link{display:inline-flex; align-items:center; gap:5px; font-family:var(--mono); font-size:11.5px; font-weight:600; color:var(--accent); background:var(--accent-soft); padding:6px 12px; border-radius:999px; text-decoration:none; white-space:nowrap}
 .paper-link:hover{opacity:.82}
+.authors-card{display:flex; flex-direction:column; align-items:center; gap:3px}
+.authors-card-name{font-family:var(--mono); font-size:14px; color:var(--ink); font-weight:650}
+.authors-card .fa-tag{margin:5px 0}
+.authors-card-co{font-family:var(--mono); font-size:12.5px; color:var(--ink-2)}
+.authors-card-aff{font-family:var(--mono); font-size:11px; color:var(--muted); margin-bottom:12px}
 
 /* ---- sections ---- */
 section.proj{padding-block:52px; border-bottom:1px solid var(--rule)}
@@ -224,15 +229,14 @@ footer{padding-block:28px 40px; font-family:var(--mono); font-size:11.5px; color
     <h1>Deep RL Framework for Max-Min Fairness Optimization</h1>
     <div class="hero-grid">
       <div>
-        <p>I designed a deep reinforcement learning framework for max-min fairness optimization — a class of problems where the goal isn't to maximize total throughput, but to lift the worst-performing participant in a system, so resources go where they're actually needed rather than where they're cheapest to deliver. I validated this framework on a wireless communications problem: beamforming control in Stacked Intelligent Metasurfaces (SIM), a next-generation multi-layer programmable surface that reshapes radio waves directly in the air.</p>
-        <div class="authors">
-          <span class="authors-names"><b>Ayush B. Patel</b><span class="fa-tag">first author</span>&amp; Abhishek Jindal &middot; DAIICT</span>
-        </div>
+        <p>I designed a deep reinforcement learning framework for max-min fairness optimization — a class of problems where the goal isn't to maximize total throughput, but to lift the worst-performing participant in a system, so resources go where they're actually needed rather than where they're cheapest to deliver. I validated this framework on a wireless communications problem: beamforming control in Stacked Intelligent Metasurfaces (SIM), a next-generation multi-layer programmable surface that reshapes radio waves directly in the air. The learned policy lifts the worst user's rate by <strong>+88%</strong> over classical alternating optimization.</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">+88%</div>
-        <div class="stat-label">worst-user rate, vs. classical alternating optimization</div>
-        <div class="stat-sub">IEEE TMLCN &middot; minor revision submitted</div>
+      <div class="stat-card authors-card">
+        <div class="authors-card-name"><b>Ayush B. Patel</b></div>
+        <div class="fa-tag">first author</div>
+        <div class="authors-card-co">&amp; Abhishek Jindal</div>
+        <div class="authors-card-aff">DAIICT</div>
+        <span class="paper-link" style="cursor:default">Minor revision submitted &middot; IEEE TMLCN</span>
       </div>
     </div>
   </header>
