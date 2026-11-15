@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Max-Min Fairness RL</title>
-<meta name="description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Minor revision submitted, IEEE TMLCN.">
+<meta name="description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Accepted at IEEE TMLCN.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Deep RL Framework for Max-Min Fairness Optimization">
-<meta property="og:description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Minor revision submitted, IEEE TMLCN.">
+<meta property="og:description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Accepted at IEEE TMLCN.">
 <meta property="og:image" content="https://ayush010104.github.io/sim-maxmin-fairness-drl/assets/og-preview.png">
 <meta property="og:url" content="https://ayush010104.github.io/sim-maxmin-fairness-drl/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Deep RL Framework for Max-Min Fairness Optimization">
-<meta name="twitter:description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Minor revision submitted, IEEE TMLCN.">
+<meta name="twitter:description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Accepted at IEEE TMLCN.">
 <meta name="twitter:image" content="https://ayush010104.github.io/sim-maxmin-fairness-drl/assets/og-preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,6 +79,12 @@ h1,h2,h3{font-family:var(--display); letter-spacing:-.02em; text-wrap:balance; m
 .fa-tag{font-size:8.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--accent); background:var(--accent-soft); padding:2px 6px; border-radius:5px; margin:0 6px; vertical-align:middle; white-space:nowrap}
 .paper-link{display:inline-flex; align-items:center; gap:5px; font-family:var(--mono); font-size:11.5px; font-weight:600; color:var(--accent); background:var(--accent-soft); padding:6px 12px; border-radius:999px; text-decoration:none; white-space:nowrap}
 .paper-link:hover{opacity:.82}
+
+.accept-banner{display:flex; align-items:flex-start; gap:12px; margin:22px 0 4px; padding:13px 18px; background:var(--ok-soft); border:1px solid color-mix(in srgb, var(--ok) 32%, transparent); border-left:4px solid var(--ok); border-radius:10px; color:var(--ink); font-size:15px; line-height:1.5}
+.accept-banner strong{color:var(--ok); font-weight:700}
+.accept-banner svg{flex:none; width:20px; height:20px; margin-top:2px; color:var(--ok)}
+.accepted-badge{display:inline-flex; align-items:center; gap:7px; font-family:var(--mono); font-size:12px; font-weight:700; letter-spacing:.02em; color:var(--ok); background:var(--ok-soft); border:1px solid color-mix(in srgb, var(--ok) 38%, transparent); padding:7px 14px; border-radius:999px; white-space:nowrap; box-shadow:0 0 0 4px color-mix(in srgb, var(--ok) 13%, transparent)}
+.accepted-badge svg{width:14px; height:14px; flex:none}
 .authors-card{display:flex; flex-direction:column; align-items:center; gap:3px}
 .authors-card-name{font-family:var(--mono); font-size:14px; color:var(--ink); font-weight:650}
 .authors-card .fa-tag{margin:5px 0}
@@ -235,6 +241,8 @@ footer{padding-block:28px 40px; font-family:var(--mono); font-size:11.5px; color
 <div class="wrap">
   <div class="mark">Ayush B. Patel<span>.</span></div>
 
+  <div class="accept-banner" role="note"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="8.2"/><path d="M6.3 10.3l2.6 2.6 4.8-5.2"/></svg><span><strong>Accepted for publication</strong> in IEEE Transactions on Machine Learning in Communications and Networking (TMLCN).</span></div>
+
   <header class="hero">
     <h1>Deep RL Framework for Max-Min Fairness Optimization</h1>
     <div class="hero-grid">
@@ -246,7 +254,7 @@ footer{padding-block:28px 40px; font-family:var(--mono); font-size:11.5px; color
         <div class="fa-tag">first author</div>
         <div class="authors-card-co">&amp; Abhishek Jindal</div>
         <div class="authors-card-aff">DAIICT</div>
-        <span class="paper-link" style="cursor:default">Minor revision submitted &middot; IEEE TMLCN</span>
+        <span class="accepted-badge"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="8.2"/><path d="M6.3 10.3l2.6 2.6 4.8-5.2"/></svg>Accepted &middot; IEEE TMLCN</span>
       </div>
     </div>
   </header>
@@ -572,8 +580,8 @@ footer{padding-block:28px 40px; font-family:var(--mono); font-size:11.5px; color
 
   <!-- ============== CLOSING ============== -->
   <section class="closing">
-    <span class="pill">IEEE TMLCN &middot; minor revision submitted</span>
-    <p>Across extensive simulations, the framework outperformed both classical alternating-optimization solvers and existing DRL baselines by a wide margin, including an 88% improvement in the worst-user rate over the standard optimization approach. The minor revision has been submitted to IEEE Transactions on Machine Learning in Communications and Networking.</p>
+    <span class="pill">IEEE TMLCN &middot; accepted</span>
+    <p>Across extensive simulations, the framework outperformed both classical alternating-optimization solvers and existing DRL baselines by a wide margin, including an 88% improvement in the worst-user rate over the standard optimization approach. The paper has been accepted for publication in IEEE Transactions on Machine Learning in Communications and Networking.</p>
   </section>
 
   <footer>© 2026 Ayush Brijesh Patel · Deep RL for Max-Min Fairness</footer>
