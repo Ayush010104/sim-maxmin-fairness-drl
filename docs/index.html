@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Max-Min Fairness RL</title>
-<meta name="description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Accepted at IEEE TMLCN.">
+<meta name="description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 89% over classical alternating optimization. Accepted at IEEE TMLCN.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Deep RL Framework for Max-Min Fairness Optimization">
-<meta property="og:description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Accepted at IEEE TMLCN.">
+<meta property="og:description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 89% over classical alternating optimization. Accepted at IEEE TMLCN.">
 <meta property="og:image" content="https://ayush010104.github.io/sim-maxmin-fairness-drl/assets/og-preview.png">
 <meta property="og:url" content="https://ayush010104.github.io/sim-maxmin-fairness-drl/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Deep RL Framework for Max-Min Fairness Optimization">
-<meta name="twitter:description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 88% over classical alternating optimization. Accepted at IEEE TMLCN.">
+<meta name="twitter:description" content="A deep RL framework for max-min fairness in stacked intelligent metasurfaces — IGPD actions, a composite log-difference reward, and a hybrid SAC-DDPG actor, improving worst-user rate 89% over classical alternating optimization. Accepted at IEEE TMLCN.">
 <meta name="twitter:image" content="https://ayush010104.github.io/sim-maxmin-fairness-drl/assets/og-preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -264,7 +264,7 @@ footer{padding-block:28px 40px; font-family:var(--mono); font-size:11.5px; color
  <section class="proj" id="mdp">
   <div class="eyebrow sec-num">01 — The control loop</div>
 
-  <h2 class="sec-h">Constarined Optimization problem modeled as sequential decision-making process</h2>
+  <h2 class="sec-h">Constrained Optimization problem modeled as sequential decision-making process</h2>
 
   <p class="sec-body">
     A constrained optimization problem is represented as a Markov
@@ -501,7 +501,7 @@ footer{padding-block:28px 40px; font-family:var(--mono); font-size:11.5px; color
     <p class="sec-body">Three pieces turn the framework above into something that actually runs: a projection rule that keeps every action physically valid, a network architecture that executes it, and the real results it produces.</p>
 
     <h3 class="subsec-h">Keeping both actions well-behaved</h3>
-    <p class="sec-body">The &Delta;&theta; phase delta isn&rsquo;t computed the naive way. Each phase value in the system has to sit exactly on a unit circle &mdash; a hardware constraint. A naive approach lets the network propose any raw adjustment and projects it back onto the circle after the fact, but that creates a problem: countless different raw adjustments can land on the exact same point, so the stored action carries no information about which one actually happened. Instead, the porposed framework stores the IGPD (In Graph Proposed Delta Action) &mdash; the actual step from the old point to the new one on the circle &mdash; so the critic always learns from an action that genuinely explains the transition it caused.</p>
+    <p class="sec-body">The &Delta;&theta; phase delta isn&rsquo;t computed the naive way. Each phase value in the system has to sit exactly on a unit circle &mdash; a hardware constraint. A naive approach lets the network propose any raw adjustment and projects it back onto the circle after the fact, but that creates a problem: countless different raw adjustments can land on the exact same point, so the stored action carries no information about which one actually happened. Instead, the proposed framework stores the IGPD (In-Graph Projected Delta action) &mdash; the actual step from the old point to the new one on the circle &mdash; so the critic always learns from an action that genuinely explains the transition it caused.</p>
     <div class="figure-box">
       <svg class="igpd-svg" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A point on a circle, a raw proposed move that overshoots past the circle's edge in roughly the same direction as where it lands, and the actual stored action: the short chord from the old point to the projected new point.">
         <circle class="igpd-circle" cx="180" cy="180" r="120"></circle>
@@ -582,7 +582,7 @@ footer{padding-block:28px 40px; font-family:var(--mono); font-size:11.5px; color
   <!-- ============== CLOSING ============== -->
   <section class="closing">
     <span class="pill">IEEE TMLCN &middot; accepted</span>
-    <p>Across extensive simulations, the framework outperformed both classical alternating-optimization solvers and existing DRL baselines by a wide margin, including an 88% improvement in the worst-user rate over the standard optimization approach. The paper has been accepted for publication in IEEE Transactions on Machine Learning in Communications and Networking.</p>
+    <p>Across extensive simulations, the framework outperformed both classical alternating-optimization solvers and existing DRL baselines by a wide margin, including an 89% improvement in the worst-user rate over the standard optimization approach. The paper has been accepted for publication in IEEE Transactions on Machine Learning in Communications and Networking.</p>
     <p>The agent is open source as a problem-agnostic library for max-min fairness over any constrained optimization problem: <a href="https://github.com/Ayush010104/maxmin-fairness-rl" target="_blank" rel="noopener">github.com/Ayush010104/maxmin-fairness-rl</a>.</p>
   </section>
 
